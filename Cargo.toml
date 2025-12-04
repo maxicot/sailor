@@ -1,0 +1,14 @@
+[package]
+name = "sailor"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members = ["kernel"]
+
+[dependencies]
+ovmf-prebuilt = "0.1.0-alpha.1"
+
+[build-dependencies]
+sailor_kernel = {path = "kernel", artifact = "bin", target = "x86_64-unknown-none"}
+bootloader = "^0.11"
